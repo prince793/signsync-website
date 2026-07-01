@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SignSync - Communicate Without Barriers</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><img src="assets/logo.png" alt="SignSync" class="logo-img"> SignSync</div>
+    <div class="nav-links">
+      <a href="#problem">The Gap</a>
+      <a href="#how">How It Works</a>
+      <a href="#demo">Try It Live</a>
+      <a href="#features">Features</a>
+      <a href="#team">Team</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow mono">AI + IoT Capstone Project</div>
+      <h1>Every gesture,<br><span class="grad-text">understood in real time.</span></h1>
+      <p class="mono" style="color:var(--text-tertiary); margin:-8px 0 20px;">Developed by Casem, Prince Edrian</p>
+      <p class="lead">SignSync recognizes Filipino Sign Language gestures and translates them instantly built to help SPED classrooms communicate without barriers.</p>
+      <div class="btn-row">
+        <a href="#how" class="btn btn-primary">See how it works</a>
+        <a href="#team" class="btn btn-ghost">Meet the team</a>
+      </div>
+      <div class="stat-row">
+        <div>
+          <div class="stat-num grad-text">FSL</div>
+          <div class="stat-label">Filipino Sign Language focus</div>
+        </div>
+        <div>
+          <div class="stat-num grad-text">Real-time</div>
+          <div class="stat-label">Gesture recognition</div>
+        </div>
+        <div>
+          <div class="stat-num grad-text">IoT</div>
+          <div class="stat-label">Classroom-ready hardware</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hand-visual">
+      <svg viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- detection bounding box with corner brackets -->
+        <g class="det-box">
+          <path d="M70 90 L70 60 M70 60 L100 60" />
+          <path d="M330 90 L330 60 M330 60 L300 60" />
+          <path d="M70 410 L70 440 M70 440 L100 440" />
+          <path d="M330 410 L330 440 M330 440 L300 440" />
+        </g>
+        <text x="70" y="46" class="det-label">DETECTING…</text>
+        <text x="330" y="454" class="det-label" text-anchor="end">FSL · REAL-TIME</text>
+
+        <!-- connections -->
+        <g class="landmark-line">
+          <line x1="200" y1="400" x2="170" y2="380"/>
+          <line x1="170" y1="380" x2="145" y2="350"/>
+          <line x1="145" y1="350" x2="125" y2="320"/>
+          <line x1="125" y1="320" x2="110" y2="295"/>
+
+          <line x1="200" y1="400" x2="165" y2="300"/>
+          <line x1="165" y1="300" x2="150" y2="240"/>
+          <line x1="150" y1="240" x2="140" y2="195"/>
+          <line x1="140" y1="195" x2="132" y2="155"/>
+
+          <line x1="200" y1="400" x2="200" y2="290"/>
+          <line x1="200" y1="290" x2="195" y2="220"/>
+          <line x1="195" y1="220" x2="192" y2="170"/>
+          <line x1="192" y1="170" x2="190" y2="125"/>
+
+          <line x1="200" y1="400" x2="230" y2="295"/>
+          <line x1="230" y1="295" x2="230" y2="225"/>
+          <line x1="230" y1="225" x2="232" y2="175"/>
+          <line x1="232" y1="175" x2="233" y2="130"/>
+
+          <line x1="200" y1="400" x2="258" y2="305"/>
+          <line x1="258" y1="305" x2="262" y2="250"/>
+          <line x1="262" y1="250" x2="266" y2="210"/>
+          <line x1="266" y1="210" x2="268" y2="175"/>
+
+          <line x1="165" y1="300" x2="200" y2="290"/>
+          <line x1="200" y1="290" x2="230" y2="295"/>
+          <line x1="230" y1="295" x2="258" y2="305"/>
+        </g>
+
+        <!-- landmark points -->
+        <circle class="landmark-dot" cx="200" cy="400" r="4.5"/>
+        <circle class="landmark-dot" cx="170" cy="380" r="3.2" style="animation-delay:.1s"/>
+        <circle class="landmark-dot" cx="145" cy="350" r="3.2" style="animation-delay:.2s"/>
+        <circle class="landmark-dot violet" cx="125" cy="320" r="3.2" style="animation-delay:.3s"/>
+        <circle class="landmark-dot violet pulse" cx="110" cy="295" r="3.6" style="animation-delay:.4s"/>
+
+        <circle class="landmark-dot" cx="165" cy="300" r="3.2"/>
+        <circle class="landmark-dot" cx="150" cy="240" r="3.2" style="animation-delay:.15s"/>
+        <circle class="landmark-dot" cx="140" cy="195" r="3.2" style="animation-delay:.3s"/>
+        <circle class="landmark-dot pulse" cx="132" cy="155" r="3.6" style="animation-delay:.45s"/>
+
+        <circle class="landmark-dot" cx="200" cy="290" r="3.2"/>
+        <circle class="landmark-dot" cx="195" cy="220" r="3.2" style="animation-delay:.2s"/>
+        <circle class="landmark-dot" cx="192" cy="170" r="3.2" style="animation-delay:.35s"/>
+        <circle class="landmark-dot violet pulse" cx="190" cy="125" r="3.6" style="animation-delay:.5s"/>
+
+        <circle class="landmark-dot" cx="230" cy="295" r="3.2"/>
+        <circle class="landmark-dot" cx="230" cy="225" r="3.2" style="animation-delay:.25s"/>
+        <circle class="landmark-dot" cx="232" cy="175" r="3.2" style="animation-delay:.4s"/>
+        <circle class="landmark-dot pulse" cx="233" cy="130" r="3.6" style="animation-delay:.55s"/>
+
+        <circle class="landmark-dot" cx="258" cy="305" r="3.2"/>
+        <circle class="landmark-dot" cx="262" cy="250" r="3.2" style="animation-delay:.3s"/>
+        <circle class="landmark-dot" cx="266" cy="210" r="3.2" style="animation-delay:.45s"/>
+        <circle class="landmark-dot violet pulse" cx="268" cy="175" r="3.6" style="animation-delay:.6s"/>
+
+        <!-- scan line -->
+        <line class="scan-line" x1="80" y1="150" x2="320" y2="150"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section id="problem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow mono">The Gap</div>
+      <h2>Classrooms move fast. Communication shouldn't be what slows a student down.</h2>
+      <p>In SPED classrooms, sign language is often the clearest way a student can express what they know but not every teacher, aide, or classmate can read it in real time.</p>
+    </div>
+
+    <div class="problem-grid reveal">
+      <div class="problem-card">
+        <span class="num">01</span>
+        <h3>Limited FSL fluency</h3>
+        <p>Few teachers and support staff are fluent in Filipino Sign Language, creating a daily translation gap in instruction and assessment.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">02</span>
+        <h3>No real-time bridge</h3>
+        <p>Existing tools are either too slow, too generic, or not built for a classroom's pace leaving gestures unread until it's too late to respond.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">03</span>
+        <h3>Hardware that isn't classroom-ready</h3>
+        <p>Sign recognition research rarely accounts for shared devices, variable lighting, or the physical setup of an actual SPED room.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" style="background:var(--bg-elevated);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow mono">How It Works</div>
+      <h2>From gesture to understanding, in four steps.</h2>
+      <p>SignSync pairs an IoT capture unit with an AI recognition pipeline built specifically around Filipino Sign Language.</p>
+    </div>
+
+    <div class="pipeline reveal">
+      <div class="pipeline-track">
+        <div class="pipe-step">
+          <div class="pipe-icon">01</div>
+          <h3>Capture</h3>
+          <p>The IoT unit captures hand movement and gesture data directly in the classroom.</p>
+          <span class="pipe-arrow">→</span>
+        </div>
+        <div class="pipe-step">
+          <div class="pipe-icon">02</div>
+          <h3>Track</h3>
+          <p>Hand landmarks are isolated in real time, filtering out noise from the room around them.</p>
+          <span class="pipe-arrow">→</span>
+        </div>
+        <div class="pipe-step">
+          <div class="pipe-icon">03</div>
+          <h3>Recognize</h3>
+          <p>The AI model matches tracked movement against trained Filipino Sign Language gestures.</p>
+          <span class="pipe-arrow">→</span>
+        </div>
+        <div class="pipe-step">
+          <div class="pipe-icon">04</div>
+          <h3>Translate</h3>
+          <p>The result is surfaced instantly readable by the teacher the moment it's signed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow mono">Features</div>
+      <h2>Built around a real classroom, not a lab demo.</h2>
+    </div>
+
+    <div class="feature-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon"><img src="assets/ic_camera.png" alt=""></div>
+        <h3>Real-time recognition</h3>
+        <p>Gestures are processed and translated with minimal delay, keeping pace with classroom conversation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="assets/ic_folder_alphabet.png" alt=""></div>
+        <h3>FSL-specific training</h3>
+        <p>The recognition model is trained specifically on Filipino Sign Language, not adapted from foreign sign systems.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="assets/ic_folder_numbers.png" alt=""></div>
+        <h3>IoT-integrated capture</h3>
+        <p>A dedicated capture unit handles gesture input, keeping the system independent of any single device.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="assets/ic_folder_words.png" alt=""></div>
+        <h3>SPED-classroom ready</h3>
+        <p>Designed with input from an actual SPED setting, accounting for shared use, lighting, and pacing.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="assets/ic_folder_sentence.png" alt=""></div>
+        <h3>Continuous feedback loop</h3>
+        <p>Every session helps refine recognition accuracy for the gestures used most in that classroom.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="assets/chatbot_icon.png" alt=""></div>
+        <h3>Built-in assistant</h3>
+        <p>An in-app chatbot supports learners and teachers with guidance while they use the system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIBRARY PREVIEW ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow mono">Sign Library</div>
+      <h2>A growing library of letters, numbers, and words.</h2>
+      <p>SignSync's recognition library covers fingerspelling, numbers, and common classroom words with room to grow.</p>
+    </div>
+    <div class="library-strip reveal">
+      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_a.png" alt="Sign for A"></div><span>Letter A</span></div>
+      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_b.png" alt="Sign for B"></div><span>Letter B</span></div>
+      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_c.png" alt="Sign for C"></div><span>Letter C</span></div>
+      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/number_1.png" alt="Sign for 1"></div><span>Number 1</span></div>
+      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/hello.png" alt="Sign for Hello"></div><span>Hello</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE DEMO ============ -->
+<section id="demo" style="background:var(--bg-elevated);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow mono">Try It Live</div>
+      <h2>The same recognition model, running right here.</h2>
+      <p>This runs SignSync's actual gesture recognizer in your browser no install, no server. Use your camera or upload a photo of a hand sign.</p>
+    </div>
+
+    <div class="demo-panel reveal">
+      <div>
+        <div class="demo-stage" id="demoStage">
+          <div class="demo-placeholder" id="demoPlaceholder">Start your camera or upload a photo to begin</div>
+          <video id="demoVideo" autoplay playsinline muted style="display:none;"></video>
+          <canvas id="demoOverlay" style="display:none;"></canvas>
+        </div>
+        <div class="demo-controls">
+          <button class="demo-btn primary" id="btnCamera">Use Camera</button>
+          <button class="demo-btn" id="btnUpload">Upload Photo</button>
+          <button class="demo-btn" id="btnStop" disabled>Stop</button>
+          <input type="file" id="fileInput" accept="image/*">
+        </div>
+        <div class="demo-status">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText">Model not loaded yet</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="result-card">
+          <span class="result-label">Recognized Sign</span>
+          <div class="result-sign" id="resultSign">—</div>
+          <div class="result-meta">
+            <span id="resultHand">Hand: —</span>
+            <span id="resultConf">Confidence: —</span>
+          </div>
+          <div class="confidence-bar"><div class="confidence-fill" id="confFill"></div></div>
+        </div>
+        <p class="mono" style="color:var(--text-tertiary); margin-top:16px; font-size:0.68rem; line-height:1.7;">
+          RECOGNIZES: OPEN_PALM → HELLO · THUMB_UP → LIKE · THUMB_DOWN → DISLIKE · CLOSED_FIST → FIST · VICTORY → PEACE
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTEXT ============ -->
+<section style="background:var(--bg-elevated);">
+  <div class="wrap">
+    <div class="context-panel reveal">
+      <div>
+        <div class="eyebrow mono">Where It Lives</div>
+        <h2>Piloted at Urdaneta I Central School</h2>
+        <p>SignSync is being developed for direct use in a SPED classroom setting designed alongside the realities of the students and teachers who will actually rely on it.</p>
+        <div class="context-tag-row">
+          <span class="tag">SPED CLASSROOM</span>
+          <span class="tag">URDANETA CITY</span>
+          <span class="tag">FSL DATASET</span>
+        </div>
+      </div>
+      <div class="context-visual">
+        <img src="assets/handsign.png" alt="Sign language in use">
+        <div class="caption-overlay">
+          <p>Built with the classroom in mind, not around it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow mono">The Team</div>
+      <h2>Capstone Project — BSIT, University of Eastern Pangasinan</h2>
+    </div>
+
+    <div class="team-panel reveal">
+      <div class="team-card">
+        <div class="adviser-avatar">JA</div>
+        <span class="mono">Adviser</span>
+        <h3>Ms. Jessabel P. Alancado</h3>
+        <div class="role">Capstone Adviser</div>
+        <p>Guiding the research, design, and development direction of SignSync from proposal through defense.</p>
+        <ul class="member-list">
+          <li>Research direction &amp; methodology</li>
+          <li>Technical review &amp; feedback</li>
+          <li>Defense preparation</li>
+        </ul>
+      </div>
+      <div class="team-card">
+        <div class="dev-avatar-row">
+          <div class="dev-avatar">JB</div>
+          <div class="dev-avatar">PC</div>
+          <div class="dev-avatar">RB</div>
+        </div>
+        <span class="mono">Development Team</span>
+        <h3>SignSync</h3>
+        <div class="role">Target Completion — December 2026</div>
+        <p>An AI and IoT-based Filipino Sign Language recognition system developed as a BSIT capstone project.</p>
+        <ul class="member-list">
+          <li>Bodkaen, Jan Allen — Developer</li>
+          <li>Casem, Prince Edrian — Developer</li>
+          <li>Bautista, Reinier — Developer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><img src="assets/logo.png" alt="SignSync" class="logo-img"> SignSync</div>
+    <div class="meta">
+      BSIT Capstone Project · University of Eastern Pangasinan<br>
+      Developed by Casem, Prince Edrian<br>
+      Communicate without barriers.
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script type="module" src="demo.js"></script>
+
+</body>
+</html>
