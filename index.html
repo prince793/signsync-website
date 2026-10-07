@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SignSync - Communicate Without Barriers</title>
+<meta name="description" content="SignSync is an AI-powered Android app that translates sign language gestures into text in real time, built for SPED classrooms. Download the app or try the live demo.">
+<meta name="theme-color" content="#050B18">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SignSync - Communicate Without Barriers">
+<meta property="og:description" content="Real-time sign-to-text translation on your phone. Private, on-device, and built for SPED classrooms.">
+<meta property="og:image" content="assets/logo.png">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +22,14 @@
 <nav id="nav">
   <div class="nav-inner">
     <div class="nav-brand"><img src="assets/logo.png" alt="SignSync" class="logo-img"> SignSync</div>
-    <div class="nav-links">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
       <a href="#problem">The Gap</a>
       <a href="#how">How It Works</a>
-      <a href="#demo">Try It Live</a>
       <a href="#features">Features</a>
+      <a href="#demo">Try It Live</a>
       <a href="#team">Team</a>
+      <a href="#download" class="nav-cta">Download</a>
     </div>
   </div>
 </nav>
@@ -32,24 +40,24 @@
     <div>
       <div class="eyebrow mono">AI + IoT Capstone Project</div>
       <h1>Every gesture,<br><span class="grad-text">understood in real time.</span></h1>
-      <p class="mono" style="color:var(--text-tertiary); margin:-8px 0 20px;">Developed by Casem, Prince Edrian</p>
-      <p class="lead">SignSync recognizes Filipino Sign Language gestures and translates them instantly built to help SPED classrooms communicate without barriers.</p>
+      <p class="mono" style="color:var(--text-tertiary); margin:-8px 0 20px;">Developed by the SignSync team</p>
+      <p class="lead">SignSync is an Android app that recognizes sign language gestures through your phone camera and translates them into text instantly, built to help SPED classrooms communicate without barriers.</p>
       <div class="btn-row">
-        <a href="#how" class="btn btn-primary">See how it works</a>
-        <a href="#team" class="btn btn-ghost">Meet the team</a>
+        <a href="#download" class="btn btn-primary">Download the app</a>
+        <a href="#demo" class="btn btn-ghost">Try it in your browser</a>
       </div>
       <div class="stat-row">
         <div>
-          <div class="stat-num grad-text">FSL</div>
-          <div class="stat-label">Filipino Sign Language focus</div>
+          <div class="stat-num grad-text">Sign → Text</div>
+          <div class="stat-label">Instant translation</div>
         </div>
         <div>
           <div class="stat-num grad-text">Real-time</div>
           <div class="stat-label">Gesture recognition</div>
         </div>
         <div>
-          <div class="stat-num grad-text">IoT</div>
-          <div class="stat-label">Classroom-ready hardware</div>
+          <div class="stat-num grad-text">On-device</div>
+          <div class="stat-label">No camera data uploaded</div>
         </div>
       </div>
     </div>
@@ -65,7 +73,7 @@
           <path d="M330 410 L330 440 M330 440 L300 440" />
         </g>
         <text x="70" y="46" class="det-label">DETECTING…</text>
-        <text x="330" y="454" class="det-label" text-anchor="end">FSL · REAL-TIME</text>
+        <text x="330" y="454" class="det-label" text-anchor="end">SIGN · REAL-TIME</text>
 
         <!-- connections -->
         <g class="landmark-line">
@@ -145,8 +153,8 @@
     <div class="problem-grid reveal">
       <div class="problem-card">
         <span class="num">01</span>
-        <h3>Limited FSL fluency</h3>
-        <p>Few teachers and support staff are fluent in Filipino Sign Language, creating a daily translation gap in instruction and assessment.</p>
+        <h3>Limited sign language fluency</h3>
+        <p>Few teachers and support staff are fluent in sign language, creating a daily translation gap in instruction and assessment.</p>
       </div>
       <div class="problem-card">
         <span class="num">02</span>
@@ -155,7 +163,7 @@
       </div>
       <div class="problem-card">
         <span class="num">03</span>
-        <h3>Hardware that isn't classroom-ready</h3>
+        <h3>Not built for the classroom</h3>
         <p>Sign recognition research rarely accounts for shared devices, variable lighting, or the physical setup of an actual SPED room.</p>
       </div>
     </div>
@@ -168,7 +176,7 @@
     <div class="sec-head reveal">
       <div class="eyebrow mono">How It Works</div>
       <h2>From gesture to understanding, in four steps.</h2>
-      <p>SignSync pairs an IoT capture unit with an AI recognition pipeline built specifically around Filipino Sign Language.</p>
+      <p>SignSync runs an AI hand-tracking pipeline right on the phone. A dedicated IoT capture unit is part of the project's classroom setup.</p>
     </div>
 
     <div class="pipeline reveal">
@@ -176,7 +184,7 @@
         <div class="pipe-step">
           <div class="pipe-icon">01</div>
           <h3>Capture</h3>
-          <p>The IoT unit captures hand movement and gesture data directly in the classroom.</p>
+          <p>The camera captures hand movement and gesture data directly in the classroom.</p>
           <span class="pipe-arrow">→</span>
         </div>
         <div class="pipe-step">
@@ -188,13 +196,13 @@
         <div class="pipe-step">
           <div class="pipe-icon">03</div>
           <h3>Recognize</h3>
-          <p>The AI model matches tracked movement against trained Filipino Sign Language gestures.</p>
+          <p>The on-device AI model matches tracked hand movement against known gestures.</p>
           <span class="pipe-arrow">→</span>
         </div>
         <div class="pipe-step">
           <div class="pipe-icon">04</div>
           <h3>Translate</h3>
-          <p>The result is surfaced instantly readable by the teacher the moment it's signed.</p>
+          <p>The result appears as text, readable by the teacher the moment it's signed.</p>
         </div>
       </div>
     </div>
@@ -207,38 +215,54 @@
     <div class="sec-head reveal">
       <div class="eyebrow mono">Features</div>
       <h2>Built around a real classroom, not a lab demo.</h2>
+      <p>Everything below is in the SignSync app today.</p>
     </div>
 
     <div class="feature-grid reveal">
       <div class="feature-card">
         <div class="feature-icon"><img src="assets/ic_camera.png" alt=""></div>
-        <h3>Real-time recognition</h3>
-        <p>Gestures are processed and translated with minimal delay, keeping pace with classroom conversation.</p>
+        <h3>Real-time sign-to-text</h3>
+        <p>Open the gesture scanner and see signs translated into readable text as they happen.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><img src="assets/ic_folder_alphabet.png" alt=""></div>
-        <h3>FSL-specific training</h3>
-        <p>The recognition model is trained specifically on Filipino Sign Language, not adapted from foreign sign systems.</p>
+        <h3>Learn &amp; practice</h3>
+        <p>A learning center with tutorials, how-to-sign guides, and a training mode with camera practice.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/ic_folder_numbers.png" alt=""></div>
-        <h3>IoT-integrated capture</h3>
-        <p>A dedicated capture unit handles gesture input, keeping the system independent of any single device.</p>
+        <div class="feature-icon"><img src="assets/ic_folder_sentence.png" alt=""></div>
+        <h3>Translation history</h3>
+        <p>Review past translations and track your learning progress over time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="assets/chatbot_icon.png" alt=""></div>
+        <h3>Built-in AI assistant</h3>
+        <p>An in-app chatbot supports learners and teachers with guidance while they use the app.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Private by design</h3>
+        <p>Camera frames are processed locally on your device with MediaPipe and are never uploaded.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></div>
+        <h3>Emergency SOS</h3>
+        <p>A quick-access SOS feature for urgent situations, so help is always one tap away.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div>
+        <h3>Voice sync</h3>
+        <p>Pair voice with text and signs to support conversations between Deaf and hearing users.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div>
+        <h3>Accounts or guest mode</h3>
+        <p>Sign in with email or Google, or continue as a guest to start translating right away.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><img src="assets/ic_folder_words.png" alt=""></div>
         <h3>SPED-classroom ready</h3>
         <p>Designed with input from an actual SPED setting, accounting for shared use, lighting, and pacing.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><img src="assets/ic_folder_sentence.png" alt=""></div>
-        <h3>Continuous feedback loop</h3>
-        <p>Every session helps refine recognition accuracy for the gestures used most in that classroom.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><img src="assets/chatbot_icon.png" alt=""></div>
-        <h3>Built-in assistant</h3>
-        <p>An in-app chatbot supports learners and teachers with guidance while they use the system.</p>
       </div>
     </div>
   </div>
@@ -250,14 +274,42 @@
     <div class="sec-head reveal">
       <div class="eyebrow mono">Sign Library</div>
       <h2>A growing library of letters, numbers, and words.</h2>
-      <p>SignSync's recognition library covers fingerspelling, numbers, and common classroom words with room to grow.</p>
+      <p>The in-app sign library includes the full A–Z fingerspelling alphabet, numbers 1–10, and a large set of everyday words, each with a how-to-sign guide. Reference images follow the ASL alphabet.</p>
     </div>
     <div class="library-strip reveal">
-      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_a.png" alt="Sign for A"></div><span>Letter A</span></div>
-      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_b.png" alt="Sign for B"></div><span>Letter B</span></div>
-      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_c.png" alt="Sign for C"></div><span>Letter C</span></div>
+      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_a.png" alt="ASL sign for A"></div><span>Letter A</span></div>
+      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_b.png" alt="ASL sign for B"></div><span>Letter B</span></div>
+      <div class="lib-card"><div class="lib-img-wrap"><img src="assets/asl_c.png" alt="ASL sign for C"></div><span>Letter C</span></div>
       <div class="lib-card"><div class="lib-img-wrap"><img src="assets/number_1.png" alt="Sign for 1"></div><span>Number 1</span></div>
       <div class="lib-card"><div class="lib-img-wrap"><img src="assets/hello.png" alt="Sign for Hello"></div><span>Hello</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section id="download">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow mono">Get the App</div>
+      <h2>Install SignSync on your Android phone.</h2>
+      <p>Free for educational use. Camera processing happens on your device.</p>
+    </div>
+
+    <div class="download-panel reveal">
+      <div class="download-main">
+        <img src="assets/logo.png" alt="SignSync app icon" class="download-logo">
+        <div>
+          <h3>SignSync for Android</h3>
+          <p class="mono dl-meta">Version 1.0 · Android 7.0+ · ~130 MB</p>
+        </div>
+        <a class="btn btn-primary" id="apkBtn" href="https://github.com/prince793/signsync-website/releases/latest" rel="noopener">Download APK</a>
+      </div>
+      <ol class="install-steps">
+        <li><strong>Download</strong> the APK file to your phone.</li>
+        <li>Open it. If asked, allow <strong>Install unknown apps</strong> for your browser or file manager.</li>
+        <li>Tap <strong>Install</strong>, then open SignSync and allow camera access.</li>
+      </ol>
+      <p class="download-note">Only download SignSync from this page. Need help? Contact the team below.</p>
     </div>
   </div>
 </section>
@@ -268,7 +320,7 @@
     <div class="sec-head reveal">
       <div class="eyebrow mono">Try It Live</div>
       <h2>The same recognition model, running right here.</h2>
-      <p>This runs SignSync's actual gesture recognizer in your browser no install, no server. Use your camera or upload a photo of a hand sign.</p>
+      <p>This runs the same gesture recognizer file that ships inside the app, right in your browser. No install, no server, and nothing is uploaded. Use your camera or upload a photo of a hand sign.</p>
     </div>
 
     <div class="demo-panel reveal">
@@ -301,7 +353,7 @@
           <div class="confidence-bar"><div class="confidence-fill" id="confFill"></div></div>
         </div>
         <p class="mono" style="color:var(--text-tertiary); margin-top:16px; font-size:0.68rem; line-height:1.7;">
-          RECOGNIZES: OPEN_PALM → HELLO · THUMB_UP → LIKE · THUMB_DOWN → DISLIKE · CLOSED_FIST → FIST · VICTORY → PEACE
+          TECHNOLOGY PREVIEW &mdash; THE FULL SIGN LIBRARY LIVES IN THE APP. THIS DEMO RECOGNIZES: OPEN_PALM → HELLO · THUMB_UP → LIKE · THUMB_DOWN → DISLIKE · CLOSED_FIST → FIST · VICTORY → PEACE
         </p>
       </div>
     </div>
@@ -314,12 +366,12 @@
     <div class="context-panel reveal">
       <div>
         <div class="eyebrow mono">Where It Lives</div>
-        <h2>Piloted at Urdaneta I Central School</h2>
+        <h2>Built for Urdaneta I Central School</h2>
         <p>SignSync is being developed for direct use in a SPED classroom setting designed alongside the realities of the students and teachers who will actually rely on it.</p>
         <div class="context-tag-row">
           <span class="tag">SPED CLASSROOM</span>
           <span class="tag">URDANETA CITY</span>
-          <span class="tag">FSL DATASET</span>
+          <span class="tag">SIGN-TO-TEXT</span>
         </div>
       </div>
       <div class="context-visual">
@@ -337,7 +389,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow mono">The Team</div>
-      <h2>Capstone Project — BSIT, University of Eastern Pangasinan</h2>
+      <h2>Capstone Project - BSIT, University of Eastern Pangasinan</h2>
     </div>
 
     <div class="team-panel reveal">
@@ -364,9 +416,9 @@
         <div class="role">Target Completion — December 2026</div>
         <p>An AI and IoT-based Filipino Sign Language recognition system developed as a BSIT capstone project.</p>
         <ul class="member-list">
-          <li>Bodkaen, Jan Allen — Developer</li>
-          <li>Casem, Prince Edrian — Developer</li>
-          <li>Bautista, Reinier — Developer</li>
+          <li>Bodkaen, Jan Allen — Developer - App</li>
+          <li>Bautista, Rainier — Developer - App</li>
+          <li>Casem, Prince Edrian — Developer - Website</li>
         </ul>
       </div>
     </div>
@@ -378,8 +430,8 @@
     <div class="footer-brand"><img src="assets/logo.png" alt="SignSync" class="logo-img"> SignSync</div>
     <div class="meta">
       BSIT Capstone Project · University of Eastern Pangasinan<br>
-      Developed by Casem, Prince Edrian<br>
-      Communicate without barriers.
+      Developed by Bodkaen, Bautista &amp; Casem<br>
+      <a href="privacy.html">Privacy &amp; Terms</a> · Communicate without barriers.
     </div>
   </div>
 </footer>
